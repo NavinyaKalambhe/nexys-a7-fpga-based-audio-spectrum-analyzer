@@ -2,6 +2,8 @@
 
 A complete audio DSP chain in pure Verilog for the **Digilent Nexys A7-100T**: the on-board PDM microphone is decimated, filtered, windowed, run through a 1024-point FFT, and drawn as a live log-scale spectrum on a VGA monitor.
 
+[![Demo video](https://img.youtube.com/vi/uDEAQ-_7Y-Q/maxresdefault.jpg)](https://youtu.be/uDEAQ-_7Y-Q)
+
 ```
  PDM mic ─► CIC decimator ─► gain ─► 127-tap FIR ─► Hann window ─► 1024-pt FFT ─► log magnitude ─► VGA
  2.5 MHz     N=4, R=64      x1..x8   LPF/HPF/BPF                    radix-2 DIT                    640x480@60
