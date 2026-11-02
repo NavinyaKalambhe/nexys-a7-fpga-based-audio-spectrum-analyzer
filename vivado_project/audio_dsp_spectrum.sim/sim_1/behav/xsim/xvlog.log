@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/navin/Downloads/audio_dsp_fpga/audio_dsp_fpga/rtl/fft1024.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft1024
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/navin/Downloads/audio_dsp_fpga/audio_dsp_fpga/tb/tb_fft.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fft

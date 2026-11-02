@@ -1,0 +1,143 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Mon Nov  2 20:16:53 2026
+| Host         : Navinya running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file audio_spectrum_top_control_sets_placed.rpt
+| Design       : audio_spectrum_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    65 |
+|    Minimum number of control sets                        |    65 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   176 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    65 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     5 |
+| >= 16              |    40 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              96 |           36 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              43 |           21 |
+| Yes          | No                    | No                     |             401 |          118 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             436 |          124 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+-------------------------------------+--------------------------+------------------+----------------+--------------+
+|    Clock Signal   |            Enable Signal            |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+-------------------------------------+--------------------------+------------------+----------------+--------------+
+|  clk100_IBUF_BUFG | u_vga/pce                           |                          |                2 |              2 |         1.00 |
+|  clk100_IBUF_BUFG |                                     | led[7]_i_1_n_0           |                2 |              4 |         2.00 |
+|  clk100_IBUF_BUFG |                                     | led[12]_i_1_n_0          |                1 |              4 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/yi[15]_i_1_n_0                |                          |                2 |              4 |         2.00 |
+|  clk100_IBUF_BUFG |                                     | led[3]_i_1_n_0           |                1 |              4 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/ph[3]_i_1_n_0                 | rst                      |                1 |              4 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/stg[0]                        | rst                      |                2 |              4 |         2.00 |
+|  clk100_IBUF_BUFG | u_fft/res_bin[8]_i_1_n_0            | u_fft/res_log[7]_i_1_n_0 |                1 |              5 |         5.00 |
+|  clk100_IBUF_BUFG |                                     | u_mic/div_cnt[5]_i_1_n_0 |                1 |              6 |         6.00 |
+|  clk100_IBUF_BUFG | u_mic/cic_valid                     | rst                      |                3 |              7 |         2.33 |
+|  clk100_IBUF_BUFG | u_fir/busy_reg_n_0                  | u_mic/SR[0]              |                4 |              8 |         2.00 |
+|  clk100_IBUF_BUFG | u_spec/v2                           |                          |                3 |              8 |         2.67 |
+|  clk100_IBUF_BUFG | u_fft/n[0]                          | rst                      |                4 |              9 |         2.25 |
+|  clk100_IBUF_BUFG | u_fft/pk[8]_i_1_n_0                 | rst                      |                3 |              9 |         3.00 |
+|  clk100_IBUF_BUFG | u_fft/r_addr[9]_i_1_n_0             |                          |                4 |             10 |         2.50 |
+|  clk100_IBUF_BUFG | u_vga/pce                           | rst                      |                3 |             10 |         3.33 |
+|  clk100_IBUF_BUFG | u_vga/vc[9]_i_1_n_0                 | rst                      |                4 |             10 |         2.50 |
+|  clk100_IBUF_BUFG | u_fft/li[10]_i_1_n_0                | rst                      |                3 |             11 |         3.67 |
+|  clk100_IBUF_BUFG | u_fft/res_bin[8]_i_1_n_0            |                          |                3 |             12 |         4.00 |
+|  clk100_IBUF_BUFG | u_vga/vga_r[3]_i_2_n_0              | u_vga/vga_r[3]_i_1_n_0   |                4 |             12 |         3.00 |
+|  clk100_IBUF_BUFG | u_fft/yi[15]_i_1_n_0                | u_fft/xr[14]_i_1_n_0     |                4 |             15 |         3.75 |
+|  clk100_IBUF_BUFG | u_fft/yi[15]_i_1_n_0                | u_fft/yi[14]_i_1_n_0     |                4 |             15 |         3.75 |
+|  clk100_IBUF_BUFG | u_fft/yi[15]_i_1_n_0                | u_fft/yr[14]_i_1_n_0     |                3 |             15 |         5.00 |
+|  clk100_IBUF_BUFG | u_fft/yi[15]_i_1_n_0                | u_fft/xi[14]_i_1_n_0     |                2 |             15 |         7.50 |
+|  clk100_IBUF_BUFG | u_fir/done                          | rst                      |                3 |             15 |         5.00 |
+|  clk100_IBUF_BUFG | u_fft/w_din[31]_i_1_n_0             | u_fft/w_din[15]_i_1_n_0  |                4 |             16 |         4.00 |
+|  clk100_IBUF_BUFG | u_mic/sample[15]_i_1_n_0            |                          |                5 |             16 |         3.20 |
+|  clk100_IBUF_BUFG | u_fft/mag[15]_i_2_n_0               | u_fft/mag[15]_i_1_n_0    |                4 |             16 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/res_valid_reg_0[0]            |                          |                4 |             17 |         4.25 |
+|  clk100_IBUF_BUFG | u_fft/b_r[9]_i_1_n_0                |                          |                9 |             20 |         2.22 |
+|  clk100_IBUF_BUFG | u_fft/cap_ra_rep[9]_i_1_n_0         |                          |                5 |             20 |         4.00 |
+|  clk100_IBUF_BUFG |                                     | rst                      |               16 |             25 |         1.56 |
+|  clk100_IBUF_BUFG | u_mic/v3                            | rst                      |                7 |             26 |         3.71 |
+|  clk100_IBUF_BUFG | u_mic/c2[0]                         |                          |                7 |             26 |         3.71 |
+|  clk100_IBUF_BUFG | u_mic/c1[0]                         |                          |                7 |             26 |         3.71 |
+|  clk100_IBUF_BUFG | u_mic/c3[0]                         |                          |                7 |             26 |         3.71 |
+|  clk100_IBUF_BUFG | u_fft/w_din[31]_i_1_n_0             |                          |               11 |             26 |         2.36 |
+|  clk100_IBUF_BUFG | u_mic/snap[0]                       |                          |                5 |             26 |         5.20 |
+|  clk100_IBUF_BUFG | u_mic/v1                            | rst                      |                7 |             26 |         3.71 |
+|  clk100_IBUF_BUFG | u_mic/v2                            | rst                      |                5 |             26 |         5.20 |
+|  clk100_IBUF_BUFG | u_fir/E[0]                          | rst                      |               13 |             26 |         2.00 |
+|  clk100_IBUF_BUFG | u_mic/v0_reg_n_0                    | rst                      |                7 |             26 |         3.71 |
+|  clk100_IBUF_BUFG | u_fft/mn[15]_i_1_n_0                |                          |                5 |             30 |         6.00 |
+|  clk100_IBUF_BUFG | u_fft/pim[15]_i_1_n_0               |                          |               11 |             32 |         2.91 |
+|  clk100_IBUF_BUFG | u_fft/m3_reg_i_2_n_0                |                          |               10 |             32 |         3.20 |
+|  clk100_IBUF_BUFG | u_fft/iabs[15]_i_1_n_0              |                          |                8 |             32 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/ti[17]_i_1_n_0                |                          |               10 |             36 |         3.60 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_384_447_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_0_63_0_2_i_1_n_0     |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_128_191_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_192_255_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_256_319_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_448_511_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_832_895_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_320_383_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_896_959_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_512_575_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_960_1023_0_2_i_1_n_0 |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_704_767_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_64_127_0_2_i_1_n_0   |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_768_831_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_640_703_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG | u_fft/work_reg_576_639_0_2_i_1_n_0  |                          |               11 |             44 |         4.00 |
+|  clk100_IBUF_BUFG |                                     |                          |               36 |             97 |         2.69 |
+|  clk100_IBUF_BUFG | u_mic/pdm_en                        | rst                      |               29 |            110 |         3.79 |
++-------------------+-------------------------------------+--------------------------+------------------+----------------+--------------+
+
+

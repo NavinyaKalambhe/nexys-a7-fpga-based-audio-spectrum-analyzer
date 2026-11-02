@@ -1,0 +1,7 @@
+vivado_project/
+*.jou
+*.log
+*.str
+.Xil/
+*.bit
+*.dcp

@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+bin  98..102 : 0 159 175 159 0
+bin 298..302 : 0 143 159 143 0
+DC bins 0..4 : 0 0 0 16 0
+max bin = 100  (expect 100)
+FFT TEST PASSED
+$finish called at time : 11785845 ns : File "C:/Users/navin/Downloads/audio_dsp_fpga/audio_dsp_fpga/tb/tb_fft.v" Line 44
