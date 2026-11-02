@@ -3,6 +3,8 @@
 A complete audio DSP chain in pure Verilog for the **Digilent Nexys A7-100T**: the on-board PDM microphone is decimated, filtered, windowed, run through a 1024-point FFT, and drawn as a live log-scale spectrum on a VGA monitor.
 
 [![Demo video](https://img.youtube.com/vi/uDEAQ-_7Y-Q/maxresdefault.jpg)](https://youtu.be/uDEAQ-_7Y-Q)
+*Click on the image for demo video
+
 
 ```
  PDM mic ─► CIC decimator ─► gain ─► 127-tap FIR ─► Hann window ─► 1024-pt FFT ─► log magnitude ─► VGA
@@ -129,6 +131,3 @@ To regenerate the ROM files: `python3 scripts/gen_mem.py`.
 | Monitor reports "out of range" | Unlikely at 25.000 MHz, but you can swap in a 25.175 MHz MMCM clock for the pixel clock |
 | Blank region at the far left | By design: bins 0-2 are hidden because the mic has a DC offset (`DC_BINS` in `fft1024.v`) |
 
-## License
-
-Add a license of your choice (MIT is a common default for hobby projects) as a `LICENSE` file and name it here.
